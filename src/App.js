@@ -2,6 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+let array1 = [1,2,3,4];
+let array2 = [5,6];
+let array3 = [...array1, ...array2];
+
+
+console.log(array3)
+
   return (
     <div className="App">
       <header className="App-header">
