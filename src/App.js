@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
 
-let array1 = [1,2,3,4,5,6];
-let array2 = [7,8,9];
+let array1 = [1,2,3,4,5,6,7];
+let array2 = [8,9];
 let array3 = [...array1, ...array2];
 
 
