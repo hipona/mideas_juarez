@@ -26,7 +26,7 @@ const Card = (props) => {
                   {cuotas}
                 </MDBTypography>
               </MDBCardText>
-              <MDBBtn href='#'>{btnText}</MDBBtn>
+              <MDBBtn href='#' className={btnStyle}>{btnText}</MDBBtn>
             </MDBCardBody>
         </MDBCard>
     </MDBCol>  

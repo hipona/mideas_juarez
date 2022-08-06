@@ -5,7 +5,7 @@
        "valor": "$2200,00",
        "cuotas": "6 cuotas sin interés de $366,67",
        "btnText": "Comprar",
-       "btnStyle" : "desiable"
+       "btnStyle" : ""
     },
     {
        "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/ragnar11-bd123ba3cbd0b00d3d16234204218577-1024-1024.jpg",
@@ -13,7 +13,7 @@
        "valor": "$2200,00",
        "cuotas": "6 cuotas sin interés de $416,67",
        "btnText": "Comprar",
-       "btnStyle" : "desiable"
+       "btnStyle" : ""
     },
     {
        "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/billeteracompleta11-8e869ca23dc412eb5e16340058857031-1024-1024.jpg",
@@ -21,6 +21,6 @@
        "valor": "$3500,00",
        "cuotas": "6 cuotas sin interés de $583,33",
        "btnText": "Comprar",
-       "btnStyle" : "desiable"
+       "btnStyle" : "disabled"
     }
 ]
