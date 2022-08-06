@@ -11,6 +11,7 @@ import {
 } from 'mdb-react-ui-kit';
 const Card = (props) => {
   const {img, titulo, valor, cuotas, btnText, btnStyle} = props
+  console.log(props)
   return (
     <MDBCol className='me-5'>
         <MDBCard>
