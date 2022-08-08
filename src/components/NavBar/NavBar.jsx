@@ -47,30 +47,6 @@ export default function App() {
             ))}
           </MDBNavbarNav>
 
-            {/* <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle tag='a' className='nav-link'>
-                  Productos
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink>Ver todos los Productos</MDBDropdownLink>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink>Accesorios en Cuero</MDBDropdownLink>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink>Casa + Oficina</MDBDropdownLink>
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem> */}
-
-          {/* <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
-            <input className='form-control' placeholder="Buscador" aria-label="Search" type='Search' />
-            <MDBBtn outline>Buscar</MDBBtn>
-          </MDBInputGroup> */}
-
           <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
             <CarWidget/>
           </MDBInputGroup>
