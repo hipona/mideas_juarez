@@ -6,7 +6,7 @@ import {
 const NavBarItems = (props) => {
   const {name} = props;
   return (
-    <MDBNavbarItem>
+    <MDBNavbarItem >
         <MDBNavbarLink href='#'>
           {name}
         </MDBNavbarLink>

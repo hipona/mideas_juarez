@@ -11,8 +11,6 @@ function App() {
       
       <ItemListContainer/>
 
-      <ItemListContainer greeting = {'Bienvenidos !!'}/>
-      
     </MDBContainer>
   );
 }
