@@ -43,7 +43,7 @@ export default function App() {
 
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             {navBarItems.map((item) => (
-                <NavBarItems name ={item}/>
+                <NavBarItems key ={item} name={item}/>
             ))}
           </MDBNavbarNav>
 
