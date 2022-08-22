@@ -6,7 +6,7 @@
        "titulo" : "Estuches de anteojos",
        "valor": "$2200,00",
        "cuotas": "6 cuotas sin interés de $366,67",
-       "btnText": "Comprar",
+       "btnText": "Ver Detalle del producto",
        "btnStyle" : ""
     },
     {
@@ -16,7 +16,7 @@
        "titulo" : "Billetera Doble - Ragnar",
        "valor": "$2200,00",
        "cuotas": "6 cuotas sin interés de $416,67",
-       "btnText": "Comprar",
+       "btnText": "Ver Detalle del producto",
        "btnStyle" : ""
     },
     {
@@ -26,7 +26,7 @@
        "titulo" : "Billetera Sobre",
        "valor": "$3500,00",
        "cuotas": "6 cuotas sin interés de $583,33",
-       "btnText": "Comprar",
+       "btnText": "Ver Detalle del producto",
        "btnStyle" : "disabled"
     },
     {
@@ -36,7 +36,7 @@
       "titulo" : "Porta Notas & Pasaporte",
       "valor": "$3000,00",
       "cuotas": "6 cuotas sin interés de $500,00",
-      "btnText": "Comprar",
+      "btnText": "Ver Detalle del producto",
       "btnStyle" : "disabled"
    }
 ]
