@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import listaDeProductos from '../Data/datos.json'
 import Item from './Item'
-import { MDBContainer, MDBRow, MDBCol, MDBSpinner } from 'mdb-react-ui-kit';
+import {MDBCol, MDBSpinner } from 'mdb-react-ui-kit';
 
 const ItemList = () => {
 
     const [productos, setProductos] = useState([]);
     
+    // Promesa
     const getProductos = new Promise((resolve, rejected) => {
         setTimeout(() => {
             resolve(listaDeProductos);
         }, 2000);
     })
-       
+    
+    //Async mock 
     const getProductosDataBase = async () => {
         try {
           const result = await getProductos;

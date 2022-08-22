@@ -3,13 +3,10 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardTitle,
-    MDBCardText,
-    MDBCardImage,
     MDBRow,
     MDBIcon,
     MDBBtn,
     MDBCol, 
-    MDBCardHeader,
     MDBCardFooter,
     MDBTypography
   } from 'mdb-react-ui-kit';
@@ -19,10 +16,9 @@ const ItemCount = ({stock, inicial, onAdd}) => {
   const [cantidad, setProducto] = useState(inicial)
 
   return (
-    <MDBCard>
+    <MDBCard className='text-center'>
+    <p className='fs-6 text-muted'>Cantidad</p>
     <MDBCardBody>
-    <MDBCardHeader>Contador</MDBCardHeader>
-      <MDBCardTitle></MDBCardTitle>
         <MDBRow>
           <MDBCol size='md'>
           <MDBBtn color='link' onClick={() => setProducto(cantidad-1)}

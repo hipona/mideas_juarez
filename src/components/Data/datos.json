@@ -1,41 +1,45 @@
  [
     {
-       "id":"1",
+       "id":1,
        "stock": 4,
        "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/portaslentes_m11-bfe7c62442a944081216234202673185-1024-1024.jpg",
        "titulo" : "Estuches de anteojos",
        "valor": "$2200,00",
-       "cuotas": "6 cuotas sin interés de $366,67",
+       "cuotas": "$366,67",
+       "descripcion":"A diferencia de otros estuches rígidos y voluminosos, permite proteger tus anteojos sin ocupar demasiado espacio en tu bolso. los remaches están colocados de manera estratégica para proteger tus gafas en caso de caídas.",
        "btnText": "Ver Detalle del producto",
        "btnStyle" : ""
     },
     {
-       "id":"2",
+       "id":2,
        "stock": 2,
        "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/ragnar11-bd123ba3cbd0b00d3d16234204218577-1024-1024.jpg",
        "titulo" : "Billetera Doble - Ragnar",
        "valor": "$2200,00",
-       "cuotas": "6 cuotas sin interés de $416,67",
+       "cuotas": "$416,67",
+       "descripcion":"Diseñamos esta billetera para ser el objeto más practico y versátil que te acompañe a diario. Realizada en una sola pieza 100% cuero curtido vegetal artesanalmente, sin costuras, sin forros que se deshacen, sin complicaciones. Únicamente posee un broche lateral simple que permitirá que accedas a su contenido de forma rápida y estilizada. Por lo demás; dóblala, extiéndela, ciérrala, ábrela, úsala con libertad como ninguna otra billetera.",
        "btnText": "Ver Detalle del producto",
        "btnStyle" : ""
     },
     {
-       "id":"3",
+       "id":3,
        "stock": 5,
        "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/billeteracompleta11-8e869ca23dc412eb5e16340058857031-1024-1024.jpg",
        "titulo" : "Billetera Sobre",
        "valor": "$3500,00",
-       "cuotas": "6 cuotas sin interés de $583,33",
+       "cuotas": "$583,33",
+       "descripcion":"Compartimientos para tarejetas, billetes y un celular, como los slots de tarjetas accesibles en la parte trasera Dimensiones: 19cm x 10cm x 1cm Correa de cierre de 1.5 cm x 40cm Diseñado en un una sola pieza de cuero 100% curtido  vegetal, com costuras, sin forros que se desgasten, con una correa de cuero central ajustable.",
        "btnText": "Ver Detalle del producto",
        "btnStyle" : "disabled"
     },
     {
-      "id":"4",
+      "id":4,
       "stock": 0,
       "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/1-201-5a2e96ae11e582c50c16291188219818-1024-1024.jpg",
       "titulo" : "Porta Notas & Pasaporte",
       "valor": "$3000,00",
-      "cuotas": "6 cuotas sin interés de $500,00",
+      "cuotas": "$500,00",
+      "descripcion":"Viajar aporta experiencias de vida valiosas, y los objetos que te acompañan durante dichos viajes forman parte de ellas. El nuevo Porta Pasaporte está diseñado para llevar de forma práctica tus pasaportes y notas, boletos, efectivo, y tarjetas, libreta, bolígrafo, todo lo necesario para realizar un buen viaje. Elaborado a partir de una sola pieza de cuero 100% curtido vegetal, sin costuras, sin forros que se desgasten.",
       "btnText": "Ver Detalle del producto",
       "btnStyle" : "disabled"
    }

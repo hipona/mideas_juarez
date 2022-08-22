@@ -11,12 +11,6 @@ export default function App() {
           <ItemList/>
       </MDBRow>
   </MDBContainer>
-
-
-     
-     
-      
- 
   
   )
 }
