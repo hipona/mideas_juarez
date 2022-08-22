@@ -7,7 +7,6 @@ const ItemList = () => {
 
     const [productos, setProductos] = useState([]);
     
-   
     const getProductos = new Promise((resolve, rejected) => {
         setTimeout(() => {
             resolve(listaDeProductos);
