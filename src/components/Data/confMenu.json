@@ -1,0 +1,53 @@
+{
+    "routes" : [
+        {
+            "route_label"             : "Inicio",
+            "to"                      : "/",
+            "menu_font_awesome_icon"  : "fa fa-home",
+            "child_routes"            : null
+        },
+
+        {
+            "route_label"             : "Cómo Comprar",
+            "to"                      : "/como_comprar",
+            "menu_font_awesome_icon"  : "fa fa-como",
+            "child_routes"            : null
+        },
+
+        {
+            "route_label"             : "Productos",
+            "to"                      : "/como_comprar",
+            "menu_font_awesome_icon"  : "fa fa-como",
+            "child_routes"            : [
+                {
+                    "route_label"      : "Ver Todos los Productos" ,
+                    "to"               : "/ver_todos_productos"
+                },
+                {
+                    "route_label"      : "Acesorios en Curo" ,
+                    "to"               : "/accesorios_curo"
+                },
+                {
+                    "route_label"      : "Casa + Oficinas" ,
+                    "to"               : "/casa_oficina"
+                }
+
+            ]
+        },
+
+        {
+            "route_label"             : "Mantenimiento & Garantía",
+            "to"                      : "/mantenimiento_garantia",
+            "menu_font_awesome_icon"  : "fa fa-como",
+            "child_routes"            : null
+        },
+
+        {
+            "route_label"             : "Contacto",
+            "to"                      : "/contacto",
+            "menu_font_awesome_icon"  : "fa fa-como",
+            "child_routes"            : null
+        }
+
+    ]
+}

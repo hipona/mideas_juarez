@@ -13,7 +13,8 @@ function App() {
       <NavBar/>
       
       {/* Nota Pasando Id= 1, 2, 3, 4 trae el detalle de cada uno de los productos*/}
-      <ItemDetailContainer id={4}/>
+      {/*<ItemDetailContainer id={1}/>*/}
+      <ItemListContainer/>
 
     </MDBContainer>
   );

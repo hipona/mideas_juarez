@@ -1,16 +1,50 @@
-import React from 'react'
-import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import ItemCount from '../ItemCount/ItemCount';
+import React, { useEffect, useState } from 'react';
+import { MDBContainer, MDBRow, MDBSpinner } from 'mdb-react-ui-kit';
+import listaDeProductos from '../Data/datos.json'
 import ItemList from './ItemList';
 
-export default function App() {
+const ItemListContainer = () => {
+
+  const [productos, setProductos] = useState([]);
+    
+  // Promesa
+  const getProductos = new Promise((resolve, rejected) => {
+      setTimeout(() => {
+          resolve(listaDeProductos);
+      }, 2000);
+  })
+  
+  //Async mock 
+  const getProductosDataBase = async () => {
+      try {
+        const result = await getProductos;
+        setProductos(result);
+      } catch (error) {
+        console.log(error);
+        alert('No se puede mostrar los Productos!');
+      }
+  };
+
+  useEffect(() => {
+      getProductosDataBase();
+  }, []);
 
   return (
     <MDBContainer>
       <MDBRow>
-          <ItemList/>
+        {productos.length ? 
+          <ItemList productos={productos} />
+         : 
+            <div className='d-flex align-items-center justify-content-center'>
+                <MDBSpinner role='status'>
+                    <span className='visually-hidden'>Loading...</span>
+                </MDBSpinner>
+            </div>
+            
+         }  
       </MDBRow>
-  </MDBContainer>
-  
+    </MDBContainer>
   )
 }
+
+export default ItemListContainer
