@@ -1,0 +1,26 @@
+[
+        {
+            "route_label"             : "Inicio",
+            "exact"                   : true,
+            "path"                    : "/"
+        },
+
+        {
+            "route_label"             : "Productos",
+            "exact"                   : true,
+            "path"                    : "/productos"
+        },
+
+        {
+            "route_label"             : "Mantenimiento & Garantía",
+            "exact"                   : true,
+            "path"                    : "/mantenimiento"
+        },
+
+        {
+            "route_label"             : "Contacto",
+            "exact"                   : true,
+            "path"                    : "/contacto"
+        }
+
+]

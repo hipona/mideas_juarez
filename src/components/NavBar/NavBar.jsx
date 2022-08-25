@@ -1,34 +1,21 @@
 import React, { useState } from 'react';
 import CarWidget from '../carWidget/CarWidget';
-import NavBarItems from './NavBarItems/NavBarItems';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBBtn,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-  MDBDropdownLink,
-  MDBCollapse,
-  MDBInputGroup
-} from 'mdb-react-ui-kit';
+import NavBarItems from '../NavBarItems/NavBarItems';
+import {MDBContainer,MDBNavbar,MDBNavbarBrand,MDBNavbarToggler,MDBIcon,MDBNavbarNav,MDBCollapse,MDBInputGroup} from 'mdb-react-ui-kit';
+import {Link} from 'react-router-dom';
+import routes from '../Data/routes.json';
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
 
-  const navBarItems = ["Inicio", "Cómo Comprar", "Mantenimento & Garantía", "Contacto"];
-
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
+    <MDBNavbar expand='lg' dark bgColor='dark'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>MiDEAS</MDBNavbarBrand>
+      <Link to={`/`}>
+      <MDBNavbarBrand>
+            MiDEAS
+      </MDBNavbarBrand>
+      </Link>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -42,12 +29,12 @@ export default function App() {
         <MDBCollapse navbar show={showBasic}>
 
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-            {navBarItems.map((item) => (
-                <NavBarItems key ={item} name={item}/>
+            {routes.map((route, index) => (
+                <NavBarItems key ={index} name={route.route_label} path={route.path} exact={route.exact}/>
             ))}
           </MDBNavbarNav>
 
-          <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+          <MDBInputGroup className='d-flex w-auto mb-3'>
             <CarWidget/>
           </MDBInputGroup>
 

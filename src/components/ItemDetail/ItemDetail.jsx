@@ -3,25 +3,25 @@ import {MDBCard,MDBCardTitle,MDBCardText,MDBCardBody,MDBCardImage,MDBRow,MDBCol}
 import ItemCount from '../ItemCount/ItemCount';
 
 export const ItemDetail = ({ item }) => {
-
+  const {id, img, titulo, valor, cuotas, stock, descripcion} = item;
   return (
     <MDBCard className='mt-3'>
       <MDBRow className='g-4'>
         <MDBCol md='7'>
-          <MDBCardImage src={item.img} alt='...' fluid />
+          <MDBCardImage src={img} alt='...' fluid />
         </MDBCol>
         <MDBCol md='5'>
           <MDBCardBody>
             <MDBCardTitle>
-                <label className='fs-2'>{item.titulo}</label>
-                <p className='fs-4'>{item.valor}</p>
-                <p className='fs-6'><label className='text-warning'>6 cuotas sin interés de </label> {item.cuotas}</p>
-                <ItemCount stock={item.stock} inicial={1} onAdd='onAdd'/>
+                <label className='fs-2'>{titulo}</label>
+                <p className='fs-4'>{valor}</p>
+                <p className='fs-6'><label className='text-warning'>6 cuotas sin interés de </label> {cuotas}</p>
+                <ItemCount stock={stock} inicial={1} onAdd='onAdd'/>
             </MDBCardTitle>
             <MDBCardText>
             <label className='fs-5'>Descripción<br/></label>
             <label>
-            {item.descripcion}
+            {descripcion}
             </label>
             </MDBCardText>
             <MDBCardText>

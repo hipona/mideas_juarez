@@ -1,53 +1,51 @@
 import React, { useEffect, useState } from 'react'
-import detalleDeProductos from '../Data/datos.json'
-import { ItemDetail } from './ItemDetail';
+import {useParams} from 'react-router-dom';
+import listaDeProductos from '../Data/datos.json'
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 import {MDBSpinner } from 'mdb-react-ui-kit';
 
-const ItemDetailContainer = ({ id }) => {
-
-  const [detalle, setDetalle] = useState(null);
-
-  const getById = (id, array) => array.find((e) => e.id === id);
-
-  // Promesa
-  const getDetalle = new Promise((resolve, rejected) => {
-      setTimeout(() => {
-          resolve(detalleDeProductos);
-      }, 2000);
-  })
+const ItemDetailContainer = () => {
   
-  //Async mock
-  const getDetalleProductiId = async (id, setDetalle) => {
+  const {id} = useParams();
+
+  const [item, setItem] = useState({});
+  
+  // Promesa
+  const getProductos = new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve(listaDeProductos.find((element) => element.id ==id));
+    }, 2000);
+  }) 
+
+  //Async mock 
+  const getDetalleProductiId = async () => {
     try {
-      const result = await getDetalle;
-      setDetalle(getById(id, result));
+      const result = await getProductos;
+      setItem(result);
     } catch (error) {
       console.log(error);
+      alert('No se puede mostrar el Item!');
     }
   };
     
   useEffect(() => {
-      getDetalleProductiId(id, setDetalle);
-     console.log(detalle);
-  }, []);  
+    getDetalleProductiId()
+  }, [id]); 
+
 
   return (
-    
-          <>
-            {
-
-            detalle ? (<ItemDetail item={detalle} /> ) : (
-              <div className='d-flex align-items-center justify-content-center'>
-                  <MDBSpinner role='status'>
-                      <span className='visually-hidden'>Loading...</span>
-                  </MDBSpinner>
-              </div>
-            )
-            
-            }
-          </>
-
-        )
+    <>
+      {Object.keys(item).length ? (
+        <ItemDetail item={item} />
+      ):(
+        <div className="d-flex align-items-center justify-content-center">
+          <MDBSpinner role="status">
+            <span className="visually-hidden">Loading...</span>
+          </MDBSpinner>
+        </div>
+      )}
+    </>
+  );
 }
 
 export default ItemDetailContainer

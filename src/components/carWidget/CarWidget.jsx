@@ -1,17 +1,15 @@
 import React from 'react';
-import { MDBBadge, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBBadge, MDBIcon, MDBNavbarLink } from 'mdb-react-ui-kit';
 
 export default function App() {
   return (
     <>
-    
-      <a className='mx-3' href='#!'>
-        <MDBIcon fas icon='shopping-cart fa-lg' size='lg' />
+      <MDBNavbarLink className='mt-4'>
+        <MDBIcon fas icon='shopping-cart fa-lg text-light' size='lg' />
         <MDBBadge color='danger' notification pill>
           1
         </MDBBadge>
-      </a>
-
+        </MDBNavbarLink>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MDBContainer, MDBRow, MDBSpinner } from 'mdb-react-ui-kit';
-import listaDeProductos from '../Data/datos.json'
-import ItemList from './ItemList';
+import listaDeProductos from '../Data/datos.json';
+import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = () => {
 
@@ -40,7 +40,6 @@ const ItemListContainer = () => {
                     <span className='visually-hidden'>Loading...</span>
                 </MDBSpinner>
             </div>
-            
          }  
       </MDBRow>
     </MDBContainer>

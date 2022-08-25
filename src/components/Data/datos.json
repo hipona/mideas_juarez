@@ -42,5 +42,29 @@
       "descripcion":"Viajar aporta experiencias de vida valiosas, y los objetos que te acompañan durante dichos viajes forman parte de ellas. El nuevo Porta Pasaporte está diseñado para llevar de forma práctica tus pasaportes y notas, boletos, efectivo, y tarjetas, libreta, bolígrafo, todo lo necesario para realizar un buen viaje. Elaborado a partir de una sola pieza de cuero 100% curtido vegetal, sin costuras, sin forros que se desgasten.",
       "btnText": "Ver Detalle del producto",
       "btnStyle" : "disabled"
+   },
+   {
+      "id":5,
+      "stock": 10,
+      "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/billeteracompleta111-97547d93b6817dc2d216383743415082-1024-1024.jpg",
+      "titulo" : "Billetera Completa",
+      "valor": "$2000,00",
+      "cuotas": "$333,33",
+      "descripcion":"Billetera minimalista diseñada para optimizar su transporte diario Para más de 8 tarjetas y varios billetes",
+      "btnText": "Ver Detalle del producto",
+      "btnStyle" : "disabled"
+   },
+   {
+      "id":6,
+      "stock": 2,
+      "img" : "https://d2r9epyceweg5n.cloudfront.net/stores/001/735/824/products/cableholder1-6a02e4e136789ee86c16234322518396-1024-1024.jpg",
+      "titulo" : "CableHolder",
+      "valor": "$500,00",
+      "cuotas": "$83,33",
+      "descripcion":"Nuestro nuevo Cableholder+ ha sido rediseñado desde cero para ampliar su capacidad y posibilidades, permitiendo ahora tener organizados y protegidos 1 o 2 cables, logrando organizar incluso cables más gruesos como el de tu Macbook. Además, cuenta con un doble acceso, más simple y práctico",
+      "btnText": "Ver Detalle del producto",
+      "btnStyle" : "disabled"
    }
 ]
+
+

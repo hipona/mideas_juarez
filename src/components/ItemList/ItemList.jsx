@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Item from './Item'
+import Item from '../Item/Item';
 import {MDBCol} from 'mdb-react-ui-kit';
 
 const ItemList = ( {productos} ) => {
