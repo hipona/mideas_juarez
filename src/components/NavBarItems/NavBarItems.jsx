@@ -1,17 +1,20 @@
 import React from 'react'
-import {MDBNavbarLink,MDBNavbarItem} from 'mdb-react-ui-kit';
+import {
+  MDBNavbarItem,
+  MDBNavbarLink
+} from 'mdb-react-ui-kit';
 import {Link} from 'react-router-dom';
 
 const NavBarItems = (props) => {
-  const {name, path} = props;
+  const {submenu, name, path} = props;
   return (
-    <MDBNavbarItem >
-      <Link to={path}>
-        <MDBNavbarLink>
-         {name}
-        </MDBNavbarLink>
-      </Link>
-    </MDBNavbarItem>
+        <MDBNavbarItem >
+          <Link to={path}>
+            <MDBNavbarLink>
+            {name}
+            </MDBNavbarLink>
+          </Link>
+        </MDBNavbarItem>
   )
 }
 

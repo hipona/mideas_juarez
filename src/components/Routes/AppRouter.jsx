@@ -11,7 +11,6 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 const AppRouter = () => {
   
   return (
-    
     <BrowserRouter>
     <NavBar/>
         <Routes>

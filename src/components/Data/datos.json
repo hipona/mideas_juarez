@@ -7,6 +7,7 @@
        "valor": "$2200,00",
        "cuotas": "$366,67",
        "descripcion":"A diferencia de otros estuches rígidos y voluminosos, permite proteger tus anteojos sin ocupar demasiado espacio en tu bolso. los remaches están colocados de manera estratégica para proteger tus gafas en caso de caídas.",
+       "colores":["marrón","negro"],
        "btnText": "Ver Detalle del producto",
        "btnStyle" : ""
     },
@@ -18,6 +19,7 @@
        "valor": "$2200,00",
        "cuotas": "$416,67",
        "descripcion":"Diseñamos esta billetera para ser el objeto más practico y versátil que te acompañe a diario. Realizada en una sola pieza 100% cuero curtido vegetal artesanalmente, sin costuras, sin forros que se deshacen, sin complicaciones. Únicamente posee un broche lateral simple que permitirá que accedas a su contenido de forma rápida y estilizada. Por lo demás; dóblala, extiéndela, ciérrala, ábrela, úsala con libertad como ninguna otra billetera.",
+       "colores":["marrón","negro"],
        "btnText": "Ver Detalle del producto",
        "btnStyle" : ""
     },
@@ -29,6 +31,7 @@
        "valor": "$3500,00",
        "cuotas": "$583,33",
        "descripcion":"Compartimientos para tarejetas, billetes y un celular, como los slots de tarjetas accesibles en la parte trasera Dimensiones: 19cm x 10cm x 1cm Correa de cierre de 1.5 cm x 40cm Diseñado en un una sola pieza de cuero 100% curtido  vegetal, com costuras, sin forros que se desgasten, con una correa de cuero central ajustable.",
+       "colores":["marrón"],
        "btnText": "Ver Detalle del producto",
        "btnStyle" : "disabled"
     },
@@ -40,6 +43,7 @@
       "valor": "$3000,00",
       "cuotas": "$500,00",
       "descripcion":"Viajar aporta experiencias de vida valiosas, y los objetos que te acompañan durante dichos viajes forman parte de ellas. El nuevo Porta Pasaporte está diseñado para llevar de forma práctica tus pasaportes y notas, boletos, efectivo, y tarjetas, libreta, bolígrafo, todo lo necesario para realizar un buen viaje. Elaborado a partir de una sola pieza de cuero 100% curtido vegetal, sin costuras, sin forros que se desgasten.",
+      "colores":["negro"],
       "btnText": "Ver Detalle del producto",
       "btnStyle" : "disabled"
    },
@@ -51,6 +55,7 @@
       "valor": "$2000,00",
       "cuotas": "$333,33",
       "descripcion":"Billetera minimalista diseñada para optimizar su transporte diario Para más de 8 tarjetas y varios billetes",
+      "colores":["marrón"],
       "btnText": "Ver Detalle del producto",
       "btnStyle" : "disabled"
    },
@@ -62,6 +67,7 @@
       "valor": "$500,00",
       "cuotas": "$83,33",
       "descripcion":"Nuestro nuevo Cableholder+ ha sido rediseñado desde cero para ampliar su capacidad y posibilidades, permitiendo ahora tener organizados y protegidos 1 o 2 cables, logrando organizar incluso cables más gruesos como el de tu Macbook. Además, cuenta con un doble acceso, más simple y práctico",
+      "colores":["marrón","negro"],
       "btnText": "Ver Detalle del producto",
       "btnStyle" : "disabled"
    }
