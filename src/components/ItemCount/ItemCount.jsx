@@ -24,13 +24,13 @@ const ItemCount = ({stock, inicial, colores, onAdd}) => {
         <MDBCol order='last'>
               <MDBRow>
                 <MDBCol size='md'>
-                  <MDBBtn color='dark' floating onClick={() => setProducto(cantidad-1)} disabled={cantidad <= inicial ? true : null}><MDBIcon fas icon="minus" /></MDBBtn>
+                  <MDBBtn color='dark' floating onClick={() => setProducto(cantidad-1)} disabled={cantidad <= inicial ? true : null}><MDBIcon fas icon='minus' /></MDBBtn>
                 </MDBCol>
                 <MDBCol size='md'>
                   <MDBTypography tag='h5'>{cantidad}</MDBTypography>
                 </MDBCol>
                 <MDBCol size='md'>
-                  <MDBBtn color='dark' floating onClick={() => setProducto(cantidad+1)} disabled={cantidad >= stock ? true : null}><MDBIcon fas icon="plus"/></MDBBtn>
+                  <MDBBtn color='dark' floating onClick={() => setProducto(cantidad+1)} disabled={cantidad >= stock ? true : null}><MDBIcon fas icon='plus'/></MDBBtn>
                 </MDBCol>
               </MDBRow>
         </MDBCol>
@@ -38,15 +38,11 @@ const ItemCount = ({stock, inicial, colores, onAdd}) => {
     </MDBContainer>
     <MDBRow>
       <MDBCol md='6'>
-      <Link to="/Cart"><MDBBtn  rounded color='dark' onClick={() => onAdd(cantidad, selecColor)} disabled={stock === 0 ? true : null} style={{width: "180px"}}>Comprar</MDBBtn></Link>   
+            <Link to='/Cart'><MDBBtn  rounded color='dark' onClick={() => onAdd(cantidad, selecColor)} disabled={stock === 0 ? true : null} style={{width: '180px'}}>Comprar</MDBBtn></Link>   
       </MDBCol>
       <MDBCol md='6'>
-         
-          {/* {cart.length != '0' && (item.id != item.id) ?  */}
-            {/* <MDBBtn rounded className='mx-2' color='success' style={{width: "100%"}}>Agregado</MDBBtn> : */}
             <MDBBtn  rounded outline color='dark' onClick={() => onAdd(cantidad, selecColor)} disabled={stock === 0 ? true : null} >Agregar al carrito</MDBBtn>
-          {/* } */}
-          </MDBCol>
+      </MDBCol>
     </MDBRow>       
   </MDBCard>
   )

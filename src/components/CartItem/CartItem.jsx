@@ -5,7 +5,7 @@ const CartItem = ({item, deleteCartPorId}) => {
  const {id, img, titulo, valor, cuotas, stock, descripcion, selecColor, cant} = item;   
   return (
       <MDBTable align='middle'>
-      <MDBTableBody>
+      <MDBTableBody responsive={'md'}>
         <tr>
           <th scope='row'>
             <div className='d-flex align-items-center'>

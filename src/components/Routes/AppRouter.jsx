@@ -15,12 +15,12 @@ const AppRouter = () => {
     <BrowserRouter>
     <NavBar/>
         <Routes>
-          <Route path ="/" element={<Home/>} />
-          <Route path ="/productos" element={<ItemListContainer/>} />
-          <Route path ="/item/:id" element={<ItemDetailContainer/>} />
-          <Route path ="/Cart" element={<Cart/>} />
-          <Route path ="/mantenimiento" element={<MantenimientoGarantia/>} />
-          <Route path ="/contacto" element={<Contacto/>} />
+          <Route path ='/' element={<Home/>} />
+          <Route path ='/productos' element={<ItemListContainer/>} />
+          <Route path ='/item/:id' element={<ItemDetailContainer/>} />
+          <Route path ='/Cart' element={<Cart/>} />
+          <Route path ='/mantenimiento' element={<MantenimientoGarantia/>} />
+          <Route path ='/contacto' element={<Contacto/>} />
         </Routes>
     <Footer/>
     </BrowserRouter>

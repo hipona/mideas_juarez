@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
   return (
     <>
       {Object.keys(itemId).length ? (
-        <ItemDetail item={itemId} />
+         <ItemDetail item={itemId} />
       ):(
         <div className="d-flex align-items-center justify-content-center">
           <MDBSpinner role="status">

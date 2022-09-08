@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { MDBContainer, MDBRow, MDBSpinner } from 'mdb-react-ui-kit';
-import listaDeProductos from '../Data/datos.json';
 import ItemList from '../ItemList/ItemList';
 
 import db from '../../service';

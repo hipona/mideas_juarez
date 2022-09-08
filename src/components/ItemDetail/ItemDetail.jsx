@@ -41,9 +41,7 @@ export const ItemDetail = ({item}) => {
             <label className='fs-2'>{titulo}</label><p className='fs-4'>{`$ ${valor}`}</p>
             <p className='fs-6'><label className='text-warning'><MDBIcon fab icon="cc-mastercard" /> {cuotas} cuotas sin interés de </label> {`$ ${parseFloat(valor / cuotas).toFixed(2)}`}</p>
             </MDBCardTitle>
-
               <ItemCount stock={stock} inicial={1} colores={colores} onAdd={addCart}/>
-           
           </MDBCardBody>
           <MDBCardText className='p-3'>
                 <label className='fs-5'>Descripción<br/></label>

@@ -32,25 +32,10 @@ export default function App() {
             {routes.map((route, index) => (
                 <NavBarItems key ={index} name={route.route_label} path={route.path}/>
             ))}  
-            {/* <MDBDropdown>
-                <MDBDropdownToggle tag='a' className='nav-link'>
-                  Dropdown
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                    {
-                      routes.map((item, index) => {
-                        return(
-                          <MDBDropdownItem key={index}>{item}</MDBDropdownItem>
-                        )
-                      })
-                    }
-                </MDBDropdownMenu>
-              </MDBDropdown> */}
           </MDBNavbarNav>
 
-
           <MDBInputGroup className='d-flex w-auto mb-3'>
-          <Link to="/Cart">
+          <Link to='/Cart'>
             <CarWidget/>
           </Link>
           </MDBInputGroup>
