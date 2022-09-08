@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react'
 import { MDBBadge, MDBIcon, MDBNavbarLink } from 'mdb-react-ui-kit';
+import { CartContext } from '../../context/CartContext';
 
-export default function App() {
+export const CarWidget = () => {
+  const cartContext = useContext(CartContext);
+  const { cart } = cartContext;
   return (
     <>
       <MDBNavbarLink className='mt-4'>
         <MDBIcon fas icon='shopping-cart fa-lg text-light' size='lg' />
         <MDBBadge color='danger' notification pill>
-          1
+          {cart.length}
         </MDBBadge>
         </MDBNavbarLink>
     </>
-  );
+  )
 }
+export default CarWidget

@@ -1,8 +1,8 @@
 import React from 'react'
-import {MDBCard,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardImage,MDBBtn,MDBCol, MDBCardFooter,MDBTypography} from 'mdb-react-ui-kit';
+import {MDBCard,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardImage,MDBBtn,MDBCol,MDBTypography} from 'mdb-react-ui-kit';
 import { Link } from "react-router-dom";
 const Item = (props) => {
-  const {id, img, titulo, valor, stock, cuotas, btnText, btnStyle} = props  
+  const {id, img, titulo, valor, stock, cuotas} = props  
   return (
     <MDBCol className='me-5 text-center'>
         <MDBCard>
@@ -15,7 +15,7 @@ const Item = (props) => {
                 </MDBTypography>
               </MDBCardText>
               <Link to={`/item/${id}`}>
-                <MDBBtn>{btnText}</MDBBtn>
+                <MDBBtn rounded color='dark' className='mx-2' >Ver Detalle del producto</MDBBtn>
               </Link>
             </MDBCardBody>
         </MDBCard>

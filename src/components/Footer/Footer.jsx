@@ -13,11 +13,12 @@ const Footer = () => {
       <MDBContainer className='pt-4'>
         <section className='mb-4'>
           <MDBBtn
-            rippleColor="dark"
+            color='dark'
+            btn-dark
             link
             floating
             size="lg"
-            className='text-dark m-1'
+            className='m-1'
             href='#!'
             role='button'
           >
@@ -25,11 +26,11 @@ const Footer = () => {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            color='dark'
             link
             floating
             size="lg"
-            className='text-dark m-1'
+            className='m-1'
             href='#!'
             role='button'
           >
@@ -37,11 +38,11 @@ const Footer = () => {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            color='dark'
             link
             floating
             size="lg"
-            className='text-dark m-1'
+            className='m-1'
             href='#!'
             role='button'
           >
@@ -49,11 +50,11 @@ const Footer = () => {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            color='dark'
             link
             floating
             size="lg"
-            className='text-dark m-1'
+            className='m-1'
             href='#!'
             role='button'
           >
@@ -61,11 +62,11 @@ const Footer = () => {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            color='dark'
             link
             floating
             size="lg"
-            className='text-dark m-1'
+            className='m-1'
             href='#!'
             role='button'
           >
@@ -73,11 +74,11 @@ const Footer = () => {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            color='dark'
             link
             floating
             size="lg"
-            className='text-dark m-1'
+            className='m-1'
             href='#!'
             role='button'
           >

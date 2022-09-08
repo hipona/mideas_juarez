@@ -1,42 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom';
-import listaDeProductos from '../Data/datos.json'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import {MDBSpinner } from 'mdb-react-ui-kit';
+
+import db from '../../service';
+import { collection, getDocs, query} from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   
   const {id} = useParams();
 
-  const [item, setItem] = useState({});
-  
-  // Promesa
-  const getProductos = new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve(listaDeProductos.find((element) => element.id ==id));
-    }, 2000);
-  }) 
-
-  //Async mock 
-  const getDetalleProductiId = async () => {
-    try {
-      const result = await getProductos;
-      setItem(result);
-    } catch (error) {
-      console.log(error);
-      alert('No se puede mostrar el Item!');
-    }
-  };
-    
+  const [itemId, setItem] = useState({});
+ 
   useEffect(() => {
-    getDetalleProductiId()
-  }, [id]); 
+    const getProductosId  = async () => {
+      try{
+        const itemCollection = collection(db, "productos");
+        const col = await getDocs(itemCollection);
+        const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data() })
 
+        setItem(res.find((element) => element.id == id));
+        
+      } catch (error) {
+        console.log(error)
+      }
+    }
+      getProductosId()
+       return () => {
+       }
+  }, [id])
 
   return (
     <>
-      {Object.keys(item).length ? (
-        <ItemDetail item={item} />
+      {Object.keys(itemId).length ? (
+        <ItemDetail item={itemId} />
       ):(
         <div className="d-flex align-items-center justify-content-center">
           <MDBSpinner role="status">

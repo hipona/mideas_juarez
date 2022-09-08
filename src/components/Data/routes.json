@@ -10,27 +10,6 @@
             "exact"                   : true,
             "path"                    : "/productos"
         },
-
-        {
-            "route_label"             : "Categorias",
-            "exact"                   : true,
-            "path"                    : "/categorias",
-            "child_routes"            : [
-                {
-                    "route_label"      : "Ver Todos los Productos" ,
-                    "path"               : "/ver_todos_productos"
-                },
-                {
-                    "route_label"      : "Acesorios en Curo" ,
-                    "path"               : "/accesorios_curo"
-                },
-                {
-                    "route_label"      : "Casa + Oficinas" ,
-                    "path"               : "/casa_oficina"
-                }
-            ]
-        },
-
         {
             "route_label"             : "Mantenimiento & Garantía",
             "exact"                   : true,

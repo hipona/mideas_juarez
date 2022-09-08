@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
 import CarWidget from '../carWidget/CarWidget';
 import NavBarItems from '../NavBarItems/NavBarItems';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBCollapse,
-  MDBDropdown,
-  MDBDropdownItem,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBInputGroup} from 'mdb-react-ui-kit';
+import {MDBContainer,MDBNavbar,MDBNavbarBrand,MDBNavbarToggler,MDBIcon,MDBNavbarNav,MDBCollapse,MDBInputGroup} from 'mdb-react-ui-kit';
 import {Link} from 'react-router-dom';
 import routes from '../Data/routes.json';
 
@@ -62,7 +50,9 @@ export default function App() {
 
 
           <MDBInputGroup className='d-flex w-auto mb-3'>
+          <Link to="/Cart">
             <CarWidget/>
+          </Link>
           </MDBInputGroup>
 
         </MDBCollapse>

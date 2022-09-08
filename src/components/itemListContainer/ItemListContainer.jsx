@@ -3,31 +3,28 @@ import { MDBContainer, MDBRow, MDBSpinner } from 'mdb-react-ui-kit';
 import listaDeProductos from '../Data/datos.json';
 import ItemList from '../ItemList/ItemList';
 
-const ItemListContainer = () => {
+import db from '../../service';
+import { collection, getDocs, getFirestore} from "firebase/firestore";
 
+const ItemListContainer = () => {
+  
   const [productos, setProductos] = useState([]);
     
-  // Promesa
-  const getProductos = new Promise((resolve, rejected) => {
-      setTimeout(() => {
-          resolve(listaDeProductos);
-      }, 2000);
-  })
-  
-  //Async mock 
-  const getProductosDataBase = async () => {
-      try {
-        const result = await getProductos;
-        setProductos(result);
-      } catch (error) {
-        console.log(error);
-        alert('No se puede mostrar los Productos!');
-      }
-  };
-
   useEffect(() => {
-      getProductosDataBase();
-  }, []);
+    const getProductosFirebase  = async () => {
+      try{
+        const itemCollection = collection(db, "productos");
+        const col = await getDocs(itemCollection);
+        const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data() })
+        setProductos(res);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+       getProductosFirebase()
+       return () => {
+       }
+  }, [])
 
   return (
     <MDBContainer>
