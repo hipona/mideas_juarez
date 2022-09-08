@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext';
+import {Link} from 'react-router-dom';
 import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from 'mdb-react-ui-kit';
 
 const ItemCount = ({stock, inicial, colores, onAdd}) => {
@@ -37,7 +38,7 @@ const ItemCount = ({stock, inicial, colores, onAdd}) => {
     </MDBContainer>
     <MDBRow>
       <MDBCol md='6'>
-      <MDBBtn  rounded color='dark' disabled={stock === 0 ? true : null} style={{width: "180px"}}>Comprar</MDBBtn>   
+      <Link to="/Cart"><MDBBtn  rounded color='dark' onClick={() => onAdd(cantidad, selecColor)} disabled={stock === 0 ? true : null} style={{width: "180px"}}>Comprar</MDBBtn></Link>   
       </MDBCol>
       <MDBCol md='6'>
          

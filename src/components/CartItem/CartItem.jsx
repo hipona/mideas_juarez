@@ -36,7 +36,6 @@ const CartItem = ({item, deleteCartPorId}) => {
         </tr>
       </MDBTableBody>
     </MDBTable>
-  
   )
 }
 
