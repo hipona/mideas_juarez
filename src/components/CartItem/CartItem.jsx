@@ -1,8 +1,8 @@
 import React from 'react'
-import { MDBTable, MDBTableBody,MDBBadge,MDBBtn,MDBIcon,MDBTableHead } from 'mdb-react-ui-kit';
+import { MDBTable, MDBTableBody,MDBBadge,MDBBtn,MDBIcon} from 'mdb-react-ui-kit';
 
 const CartItem = ({item, deleteCartPorId}) => {
- const {id, img, titulo, valor, cuotas, stock, descripcion, selecColor, cant} = item;   
+ const {id, img, titulo, valor, cuotas, selecColor, cant} = item;   
   return (
       <MDBTable align='middle'>
       <MDBTableBody responsive={'md'}>

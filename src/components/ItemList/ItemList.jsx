@@ -13,6 +13,7 @@ const ItemList = ( {productos} ) => {
                     img={item.img}
                     valor={item.valor}
                     stock={item.stock}
+                    cuotas={item.cuotas}
                     id={item.id}
                     />
                 </MDBCol>

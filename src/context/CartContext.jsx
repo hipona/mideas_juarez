@@ -5,7 +5,6 @@ export const CartContext = createContext(null);
 const CartProvider = (props) => {
 
     const [cart, setCart] = useState([]);
-    const [total, setTotal] = useState(0);
 
     const addToCart = (item, cant, selecColor) => {
         
@@ -16,7 +15,7 @@ const CartProvider = (props) => {
 
             const newCart = [...cart];
             newCart.splice( index, 1, producto);
-
+            
             setCart([ ...newCart ]);
 
         }else{
@@ -25,6 +24,11 @@ const CartProvider = (props) => {
         }
     }
 
+    const getCartTotal = (cart)=> {
+        cart?.reduce((amount, item)=> item.valor + amount, 0);
+        //console.log(cart)
+    }
+ 
     const deleteCartPorId = ( id ) => {
         const newCart = [...cart];
         let index = newCart.findIndex(p => p.id === id);
@@ -44,6 +48,7 @@ const CartProvider = (props) => {
                         cart, 
                         setCart,
                         addToCart,
+                        getCartTotal,
                         deleteCartPorId,
                         deleteCart, 
                    }}

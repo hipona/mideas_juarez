@@ -1,33 +1,27 @@
-import React, { useContext, useState } from 'react'
-import {MDBCard,MDBCardTitle,MDBCardText,MDBCardBody,MDBCardImage,MDBRow,MDBCol,MDBBtn,MDBIcon} from 'mdb-react-ui-kit';
+import React, { useContext} from 'react'
+import {MDBCard,MDBCardTitle,MDBCardText,MDBCardBody,MDBCardImage,MDBRow,MDBCol,MDBIcon} from 'mdb-react-ui-kit';
 import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
 import '../css/bootstrap-theme.css';
+import swal from 'sweetalert';
 
 export const ItemDetail = ({item}) => {
   const {id, img, titulo, valor, cuotas, stock, descripcion, colores} = item;
-  const [cantidad, setCounter] = useState('0')
-  
-  //const [selecColor, setNuevoColor] = useState('')
-  
-  const cartContext = useContext(CartContext)
-  const { addToCart} = cartContext
- 
-  // function addToCart(cantidad, selecColor){
-  // if(stock){
-  //   console.log(`Agregar al carrito el item: ${id} 
-  //   Agregar al carrito el Producto Nombre: ${titulo}
-  //   Agregar al carrito el item: ${cantidad}
-  //   Agregar al carrito el Valor: ${valor}
-  //   Agregar al carrito el Stock: ${stock}
-  //   Agregar al carrito el Descripcion: ${descripcion}
-  //   Agregar al carrito el Color: ${selecColor}`)
-  // }
 
+  const cartContext = useContext(CartContext)
+  const { addToCart } = cartContext
+ 
   const addCart = (cantidad, selecColor) => {
+    if(selecColor === 'Elija un color'){
+      return swal({
+        title: "Error!",
+        text: "Seleccione un color",
+        icon: "error",
+      })
+      return;
+    }
     addToCart(item, cantidad, selecColor)
   }
-
 
   return (
     <MDBCard className='mt-3'>
