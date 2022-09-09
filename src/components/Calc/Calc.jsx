@@ -4,7 +4,7 @@ import { CartContext } from '../../context/CartContext';
 
 const Calc = () => {
     const cartContext = useContext(CartContext);
-    const { cart, getCartTotal } = cartContext;  
+    const { cart } = cartContext;  
 
   return (
     <>
@@ -18,7 +18,6 @@ const Calc = () => {
           <div className="d-flex">
             <MDBCol className="fs-4 fw-bold">TOTAL</MDBCol>
             <MDBCol className="fs-4 fw-bold text-center">
-              {getCartTotal(cart)}
             </MDBCol>
           </div>
         </MDBCardBody>

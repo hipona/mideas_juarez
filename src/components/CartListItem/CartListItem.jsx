@@ -5,7 +5,7 @@ import CartItem from '../CartItem/CartItem';
 const CartListItem = () => {
 
   const cartContext = useContext(CartContext);
-  const { cart, deleteCartPorId, deleteCart } = cartContext;
+  const { cart, deleteCartPorId } = cartContext;
   return (
     <>
     {cart ? (cart.map( producto => {

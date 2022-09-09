@@ -4,15 +4,19 @@ export const CartContext = createContext(null);
 
 const CartProvider = (props) => {
 
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]);  
+    const [total, setTotal] = useState(0);
 
     const addToCart = (item, cant, selecColor) => {
         
+        
+
+
         if(cart.some(p => p.id === item.id)){
-            let index = cart.findIndex(p => p.id === item.id);
+            let index = cart.find(p => p.id === item.id);
             let producto = cart[index];
             producto.cant = producto.cant + cant;
-
+            
             const newCart = [...cart];
             newCart.splice( index, 1, producto);
             
@@ -24,14 +28,9 @@ const CartProvider = (props) => {
         }
     }
 
-    const getCartTotal = (cart)=> {
-        cart?.reduce((amount, item)=> item.valor + amount, 0);
-        //console.log(cart)
-    }
- 
     const deleteCartPorId = ( id ) => {
         const newCart = [...cart];
-        let index = newCart.findIndex(p => p.id === id);
+        let index = newCart.find(p => p.id === id);
         
         newCart.splice( index, 1 );
 
@@ -48,7 +47,6 @@ const CartProvider = (props) => {
                         cart, 
                         setCart,
                         addToCart,
-                        getCartTotal,
                         deleteCartPorId,
                         deleteCart, 
                    }}

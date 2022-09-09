@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { MDBBadge, MDBIcon, MDBNavbarLink } from 'mdb-react-ui-kit';
 import { CartContext } from '../../context/CartContext';
 
 export const CarWidget = () => {
   const cartContext = useContext(CartContext);
   const { cart } = cartContext;
+  
   return (
     <>
       <MDBNavbarLink className='mt-4'>

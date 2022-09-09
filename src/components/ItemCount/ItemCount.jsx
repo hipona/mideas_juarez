@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import {Link} from 'react-router-dom';
-import swal from 'sweetalert';
 import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from 'mdb-react-ui-kit';
 
   const ItemCount = ({stock, inicial, colores, onAdd}) => {

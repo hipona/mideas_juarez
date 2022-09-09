@@ -10,8 +10,9 @@ export const ItemDetail = ({item}) => {
 
   const cartContext = useContext(CartContext)
   const { addToCart } = cartContext
- 
+
   const addCart = (cantidad, selecColor) => {
+
     if(selecColor === 'Elija un color'){
       return swal({
         title: "Error!",
