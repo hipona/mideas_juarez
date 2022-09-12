@@ -3,7 +3,8 @@ import {MDBCard,MDBCardBody,MDBIcon,MDBCardHeader,MDBCardFooter,MDBContainer,MDB
 import CartListItem from '../CartListItem/CartListItem';
 import {Link} from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
-import Calc from '../Calc/Calc';
+
+import Formulario from '../Formulario/Formulario';
 const Cart = () => {
 
   const cartContext = useContext(CartContext);
@@ -16,7 +17,7 @@ const Cart = () => {
   return (
     <MDBContainer className='my-5'>
       <MDBRow>
-        <MDBCol size='8'>
+        <MDBCol sm='8'>
           <MDBCard>
             <MDBCardHeader>MI CARRITO</MDBCardHeader>
             <MDBCardBody>
@@ -30,8 +31,8 @@ const Cart = () => {
               </MDBCardFooter>
           </MDBCard>
         </MDBCol>
-        <MDBCol size='4'>
-          <Calc/>
+        <MDBCol sm='4'>
+          <Formulario/>
         </MDBCol>
       </MDBRow>
     </MDBContainer>

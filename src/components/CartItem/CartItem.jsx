@@ -1,41 +1,37 @@
 import React from 'react'
-import { MDBTable, MDBTableBody,MDBBadge,MDBBtn,MDBIcon} from 'mdb-react-ui-kit';
+import { MDBContainer, MDBRow,MDBCol,MDBBtn,MDBIcon} from 'mdb-react-ui-kit';
 
 const CartItem = ({item, deleteCartPorId}) => {
  const {id, img, titulo, valor, cuotas, selecColor, cant} = item;   
   return (
-      <MDBTable align='middle'>
-      <MDBTableBody responsive={'md'}>
-        <tr>
-          <th scope='row'>
-            <div className='d-flex align-items-center'>
-              <img
+          <>
+          <MDBContainer className='text-center'>
+          <MDBRow>
+            <MDBCol sm='2'>
+            <img
                 src={img}
                 style={{ width: '75px'}}
               />
-              <div className='ms-3'>
-                <p className='fw-bold mb-1'>{titulo}</p>
-                <p className='text-muted mb-0'>{`$ ${valor} x 1 un.`}</p>
-                <p className='text-muted mb-0'>{selecColor}</p>
-              </div>
-            </div>
-          </th>
-          <td>
-            <MDBBadge color='dark' pill>
-            {cant}
-            </MDBBadge>
-          </td>
-          <td>
-           <label className='fs-4'> ${item.cant * item.valor}</label>
-          </td>
-          <td>
+            </MDBCol>
+            <MDBCol sm='4'>
+            <p className='fw-bold mb-1'>{titulo}</p>
+            <p className='text-muted mb-0'>{`$ ${valor} x 1 un.`}</p>
+            <p className='text-muted mb-0'>{selecColor}</p>
+            </MDBCol>
+            <MDBCol sm='1'>
+               {cant}
+            </MDBCol>
+            <MDBCol sm='4'>
+            <label className='fs-4'> ${item.cant * item.valor}</label>
+            </MDBCol>
+            <MDBCol sm='1'>
             <MDBBtn color='link' rounded size='sm'>
-               <MDBIcon fas icon="trash-alt" onClick={()=>deleteCartPorId(item.id)}/>
+               <MDBIcon className='text-danger' fas icon="trash-alt" onClick={()=>deleteCartPorId(item.id)}/>
             </MDBBtn>
-          </td>
-        </tr>
-      </MDBTableBody>
-    </MDBTable>
+            </MDBCol>
+          </MDBRow>
+          </MDBContainer>
+          </>
   )
 }
 

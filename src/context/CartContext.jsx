@@ -8,10 +8,6 @@ const CartProvider = (props) => {
     const [total, setTotal] = useState(0);
 
     const addToCart = (item, cant, selecColor) => {
-        
-        
-
-
         if(cart.some(p => p.id === item.id)){
             let index = cart.find(p => p.id === item.id);
             let producto = cart[index];

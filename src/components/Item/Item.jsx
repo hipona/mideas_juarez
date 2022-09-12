@@ -19,7 +19,7 @@ const Item = (props) => {
             </MDBCardBody>
         </MDBCard>
         <Link to={`/item/${id}`}>
-            <MDBBtn rounded color='dark' className='mx-2' style={{ top: "-220px"}}><MDBIcon className='px-2 fs-6' fas icon="cart-arrow-down" /></MDBBtn>
+            <MDBBtn rounded color='dark' className='mx-2' style={{ top: "-240px"}}><MDBIcon className='px-2 fs-6' fas icon="cart-arrow-down" /></MDBBtn>
         </Link>
     </MDBCol>  
   )

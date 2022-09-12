@@ -11,44 +11,84 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
   };
 
   return (
-    
-    <MDBCard className='text-center p-3'>
-    <MDBContainer className='mb-4'>
-      <MDBRow>
-        <MDBCol order='first'>
-            <select value={selecColor} onChange={handleChange} className='form-select form-select-sm' >
-              {colores.map(colores => (
+    <MDBCard className="text-center p-3">
+      <MDBContainer className="mb-4">
+        <MDBRow>
+          <MDBCol sm='5' className='mb-3'>
+            <select
+              value={selecColor}
+              onChange={handleChange}
+              className="form-select form-select-sm"
+            >
+              {colores.map((colores) => (
                 <option key={colores} value={colores}>
                   {colores}
                 </option>
               ))}
             </select>
+          </MDBCol>
+          
+          <MDBCol size='md'>
+            <MDBRow>
+              <MDBCol size='5'>
+                <MDBBtn
+                  color="dark"
+                  floating
+                  onClick={() => setProducto(cantidad - 1)}
+                  disabled={cantidad <= inicial ? true : null}
+                >
+                  <MDBIcon fas icon="minus" />
+                </MDBBtn>
+              </MDBCol>
+
+              <MDBCol size='2'>
+                <MDBTypography tag="h5">{cantidad}</MDBTypography>
+              </MDBCol>
+
+              <MDBCol size='5'>
+                <MDBBtn
+                  color="dark"
+                  floating
+                  onClick={() => setProducto(cantidad + 1)}
+                  disabled={cantidad >= stock ? true : null}
+                >
+                  <MDBIcon fas icon="plus" />
+                </MDBBtn>
+              </MDBCol>
+            </MDBRow>
+          </MDBCol>
+
+        </MDBRow>
+      </MDBContainer>
+
+      <MDBRow>
+        <MDBCol md="6" className='mb-3'>
+          <Link to="/Cart">
+            <MDBBtn
+              rounded
+              color="dark"
+              onClick={() => onAdd(cantidad, selecColor)}
+              disabled={stock === 0 ? true : null}
+              style={{ width: "180px" }}
+            >
+              Comprar
+            </MDBBtn>
+          </Link>
         </MDBCol>
-        <MDBCol order='last'>
-              <MDBRow>
-                <MDBCol size='md'>
-                  <MDBBtn color="dark" floating onClick={() => setProducto(cantidad-1)} disabled={cantidad <= inicial ? true : null}><MDBIcon fas icon='minus' /></MDBBtn>
-                </MDBCol>
-                <MDBCol size='md'>
-                  <MDBTypography tag='h5'>{cantidad}</MDBTypography>
-                </MDBCol>
-                <MDBCol size='md'>
-                  <MDBBtn color="dark" floating onClick={() => setProducto(cantidad+1)} disabled={cantidad >= stock ? true : null}><MDBIcon fas icon='plus'/></MDBBtn>
-                </MDBCol>
-              </MDBRow>
+        <MDBCol md="6">
+          <MDBBtn
+            rounded
+            outline
+            color="dark"
+            onClick={() => onAdd(cantidad, selecColor)}
+            disabled={stock === 0 ? true : null}
+          >
+            Agregar al carrito
+          </MDBBtn>
         </MDBCol>
       </MDBRow>
-    </MDBContainer>
-    <MDBRow>
-      <MDBCol md='6'>
-            <Link to='/Cart'><MDBBtn  rounded color="dark" onClick={() => onAdd(cantidad, selecColor)} disabled={stock === 0 ? true : null} style={{width: '180px'}}>Comprar</MDBBtn></Link>   
-      </MDBCol>
-      <MDBCol md='6'>
-            <MDBBtn  rounded outline color="dark" onClick={() => onAdd(cantidad, selecColor)} disabled={stock === 0 ? true : null} >Agregar al carrito</MDBBtn>
-      </MDBCol>
-    </MDBRow>       
-  </MDBCard>
-  )
+    </MDBCard>
+  );
 }
 
 export default ItemCount;
