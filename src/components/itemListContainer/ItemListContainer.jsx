@@ -17,7 +17,7 @@ const ItemListContainer = () => {
         const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data() })
         setProductos(res);
       } catch (error) {
-        console.log(error)
+        //console.log(error)
       }
     }
        getProductosFirebase()
