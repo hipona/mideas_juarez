@@ -55,11 +55,13 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
             </MDBRow>
           </MDBCol>
         </MDBRow>
+        <MDBTypography tag='small' className='text-muted '>
+                  Stock disponible<label className='px-2'><strong>{stock}</strong></label>
+                </MDBTypography>
       </MDBContainer>
-
+      
       <MDBRow>
         <MDBCol md="6" className='mb-3'>
-          {/* <Link to="/Cart"> */}
             <MDBBtn
               rounded
               color="dark"
@@ -69,7 +71,6 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
             >
               Comprar
             </MDBBtn>
-          {/* </Link> */}
         </MDBCol>
         <MDBCol md="6">
           <MDBBtn

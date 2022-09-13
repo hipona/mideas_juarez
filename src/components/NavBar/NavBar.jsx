@@ -35,7 +35,7 @@ export default function App() {
           </MDBNavbarNav>
 
           <MDBInputGroup className='d-flex w-auto mb-3'>
-          <Link to='/Cart'>
+          <Link to='/Cart' >
             <CarWidget/>
           </Link>
           </MDBInputGroup>

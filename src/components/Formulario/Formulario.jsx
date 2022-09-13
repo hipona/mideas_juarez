@@ -3,8 +3,9 @@ import { MDBInput,MDBCard,MDBCardBody,MDBBtn,MDBCol,MDBIcon} from 'mdb-react-ui-
 import { CartContext } from '../../context/CartContext';
 import {useNavigate} from 'react-router-dom';
 import swal from 'sweetalert';
+
 import db from '../../service';
-import { addDoc, collection, getDocs } from 'firebase/firestore';
+import { addDoc, collection, getDocs, Timestamp } from 'firebase/firestore';
 
 const Formulario = () => {
     const cartContext = useContext(CartContext);
@@ -33,7 +34,8 @@ const Formulario = () => {
       total: total(),
       items: totalItems(),
       idProducto: Object.values(cart),
-      date: Date.now(),
+      //date: Date.now(),
+      date: Timestamp.fromDate(new Date()),
     });
 
     const {buyer: {email, nombre, apellido, telefono},} = formulario;

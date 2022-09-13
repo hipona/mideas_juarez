@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom';
 import { MDBCardHeader,MDBCard,MDBContainer,MDBRow,MDBCardBody,MDBBtn,MDBCol,MDBSpinner,MDBCardFooter} from 'mdb-react-ui-kit';
-
+import moment from 'moment';
 import db from '../../service';
 import { collection, getDocs, query} from "firebase/firestore";
 import ItemOrder from '../ItemOrder/ItemOrder';
@@ -22,7 +22,7 @@ const Order = () => {
         setItem(res.find((element) => element.id == id));
         
       } catch (error) {
-        console.log(error)
+        //console.log(error)
       }
     }
       getProductosId()
@@ -38,7 +38,7 @@ const Order = () => {
         <MDBRow>
           <MDBCol sm="7">
             <MDBCard>
-              <MDBCardHeader>MI OREN DE COMPRA <label className="fs-6 fw-bold">{id}</label></MDBCardHeader>
+              <MDBCardHeader>MI OREN DE COMPRA <label className="fs-6 fw-bold">{id}</label> <label className="fs-6 fw-bold">{itemId.date.toDate().toString()}</label></MDBCardHeader>
               <MDBCardBody>
                 <MDBContainer className="text-center">
                   <label>{itemId.buyer.nombre} - {itemId.buyer.apellido}</label>

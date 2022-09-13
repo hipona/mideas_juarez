@@ -15,11 +15,9 @@ const Footer = () => {
           <MDBBtn
             color='dark'
             btn-dark
-            link
             floating
             size="lg"
             className='m-1'
-            href='#!'
             role='button'
           >
             <MDBIcon fab className='fab fa-facebook-f' />
@@ -27,11 +25,9 @@ const Footer = () => {
 
           <MDBBtn
             color='dark'
-            link
             floating
             size="lg"
             className='m-1'
-            href='#!'
             role='button'
           >
             <MDBIcon fab className='fa-twitter' />
@@ -39,11 +35,9 @@ const Footer = () => {
 
           <MDBBtn
             color='dark'
-            link
             floating
             size="lg"
             className='m-1'
-            href='#!'
             role='button'
           >
             <MDBIcon fab className='fa-google' />
@@ -51,11 +45,9 @@ const Footer = () => {
 
           <MDBBtn
             color='dark'
-            link
             floating
             size="lg"
             className='m-1'
-            href='#!'
             role='button'
           >
             <MDBIcon fab className='fa-instagram' />
@@ -63,11 +55,9 @@ const Footer = () => {
 
           <MDBBtn
             color='dark'
-            link
             floating
             size="lg"
             className='m-1'
-            href='#!'
             role='button'
           >
             <MDBIcon fab className='fa-linkedin' />
@@ -75,11 +65,9 @@ const Footer = () => {
 
           <MDBBtn
             color='dark'
-            link
             floating
             size="lg"
             className='m-1'
-            href='#!'
             role='button'
           >
             <MDBIcon fab className='fa-github' />

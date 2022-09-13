@@ -5,14 +5,12 @@ import CartContext from './context/CartContext';
 
 function App() {
  
-  return (
-    
+  return ( 
     <MDBContainer fluid>
       <CartContext>
          <AppRouter/>
       </CartContext>
     </MDBContainer>
-    
   );
 }
 

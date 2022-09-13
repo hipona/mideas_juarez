@@ -19,7 +19,7 @@ const AppRouter = () => {
     <NavBar/>
         <Routes>
           <Route path ='/' element={<Home/>} />
-          {/* <Route path='*' element={<>NOT FOUND</>}/> */}
+          <Route path='*' element={<>NOT FOUND</>}/>
           <Route path ='/productos' element={<ItemListContainer/>} />
           <Route path ='/item/:id' element={<ItemDetailContainer/>} />
           <Route path ='/Cart' element={<Cart/>} />
