@@ -2,15 +2,18 @@ import React, { useContext} from 'react'
 import {MDBCard,MDBCardTitle,MDBCardText,MDBCardBody,MDBCardImage,MDBRow,MDBCol,MDBIcon} from 'mdb-react-ui-kit';
 import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
+import {Link, useNavigate} from 'react-router-dom';
 import '../css/bootstrap-theme.css';
 import swal from 'sweetalert';
 
+
 export const ItemDetail = ({item}) => {
   const {id, img, titulo, valor, cuotas, stock, descripcion, colores} = item;
-
+  
   const cartContext = useContext(CartContext)
   const { addToCart } = cartContext
-
+  const navigate = useNavigate()
+  
   const addCart = (cantidad, selecColor) => {
     if(selecColor === 'Elija un color'){
       return swal({
@@ -20,6 +23,7 @@ export const ItemDetail = ({item}) => {
       })
       return;
     }
+    navigate('/Cart')
     addToCart(item, cantidad, selecColor)
   }
 

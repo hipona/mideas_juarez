@@ -27,7 +27,6 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
               ))}
             </select>
           </MDBCol>
-          
           <MDBCol size='md'>
             <MDBRow>
               <MDBCol size='5'>
@@ -40,11 +39,9 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
                   <MDBIcon fas icon="minus" />
                 </MDBBtn>
               </MDBCol>
-
               <MDBCol size='2'>
                 <MDBTypography tag="h5">{cantidad}</MDBTypography>
               </MDBCol>
-
               <MDBCol size='5'>
                 <MDBBtn
                   color="dark"
@@ -57,13 +54,12 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
               </MDBCol>
             </MDBRow>
           </MDBCol>
-
         </MDBRow>
       </MDBContainer>
 
       <MDBRow>
         <MDBCol md="6" className='mb-3'>
-          <Link to="/Cart">
+          {/* <Link to="/Cart"> */}
             <MDBBtn
               rounded
               color="dark"
@@ -73,7 +69,7 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
             >
               Comprar
             </MDBBtn>
-          </Link>
+          {/* </Link> */}
         </MDBCol>
         <MDBCol md="6">
           <MDBBtn
