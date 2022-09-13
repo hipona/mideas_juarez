@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import {Link} from 'react-router-dom';
 import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from 'mdb-react-ui-kit';
 
-  const ItemCount = ({stock, inicial, colores, onAdd}) => {
+  const ItemCount = ({stock, inicial, colores, onAddCart, onAddShop}) => {
   const [cantidad, setProducto] = useState(inicial)
   const [selecColor, setSelectColor] = useState(colores[0])
 
@@ -63,7 +63,7 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
             <MDBBtn
               rounded
               color="dark"
-              onClick={() => onAdd(cantidad, selecColor)}
+              onClick={() => onAddShop(cantidad, selecColor)}
               disabled={stock === 0 ? true : null}
               style={{ width: "180px" }}
             >
@@ -76,7 +76,7 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
             rounded
             outline
             color="dark"
-            onClick={() => onAdd(cantidad, selecColor)}
+            onClick={() => onAddCart(cantidad, selecColor)}
             disabled={stock === 0 ? true : null}
           >
             Agregar al carrito

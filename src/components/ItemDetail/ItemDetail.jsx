@@ -14,7 +14,19 @@ export const ItemDetail = ({item}) => {
   const { addToCart } = cartContext
   const navigate = useNavigate()
   
-  const addCart = (cantidad, selecColor) => {
+  const onAddCart = (cantidad, selecColor) => {
+    if(selecColor === 'Elija un color'){
+      return swal({
+        title: "Error!",
+        text: "Seleccione un color",
+        icon: "error",
+      })
+      return;
+    }
+    addToCart(item, cantidad, selecColor)
+  }
+
+  const onAddShop = (cantidad, selecColor) => {
     if(selecColor === 'Elija un color'){
       return swal({
         title: "Error!",
@@ -39,7 +51,7 @@ export const ItemDetail = ({item}) => {
             <label className='fs-2'>{titulo}</label><p className='fs-4'>{`$ ${valor}`}</p>
             <p className='fs-6'><label className='text-warning'><MDBIcon fab icon="cc-mastercard" /> {cuotas} cuotas sin interés de </label> {`$ ${parseFloat(valor / cuotas).toFixed(2)}`}</p>
             </MDBCardTitle>
-              <ItemCount stock={stock} inicial={1} colores={colores} onAdd={addCart}/>
+              <ItemCount stock={stock} inicial={1} colores={colores} onAddCart={onAddCart} onAddShop={onAddShop}/>
           </MDBCardBody>
           <MDBCardText className='p-3'>
                 <label className='fs-5'>Descripción<br/></label>

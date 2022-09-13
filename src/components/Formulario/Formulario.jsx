@@ -8,7 +8,7 @@ import { addDoc, collection, getDocs } from 'firebase/firestore';
 
 const Formulario = () => {
     const cartContext = useContext(CartContext);
-    const { cart } = cartContext;  
+    const { cart, deleteCart } = cartContext;  
     const [response, setResponse] = useState(null);
   
     const navigate = useNavigate()
@@ -23,23 +23,18 @@ const Formulario = () => {
         return totalCompra
     }
 
-    // const productosItems = () =>{
-    //     console.log(Object.values(cart));
-    // }
-
     const [formulario, setDatos] = useState({
-        buyer: {
-            email: "",
-            nombre: "",
-            apellido: "",
-            telefono: "",
-        },
-        total: total(),
-        items: totalItems(),
-        idProducto: Object.values(cart),
-        //idProducto: cart.map(item => (item.id, item.titulo)),
-        date: Date.now()
-    })
+      buyer: {
+        email: "",
+        nombre: "",
+        apellido: "",
+        telefono: "",
+      },
+      total: total(),
+      items: totalItems(),
+      idProducto: Object.values(cart),
+      date: Date.now(),
+    });
 
     const {buyer: {email, nombre, apellido, telefono},} = formulario;
 
@@ -55,7 +50,7 @@ const Formulario = () => {
         
     };
 
-  const enviarDatos = (e) => {
+   const enviarDatos = (e) => {
     e.preventDefault();
     let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
     let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
@@ -101,7 +96,8 @@ const Formulario = () => {
         })
     }
     generarTiket(formulario);
-   
+    
+    deleteCart();
     //Limpiar Carrito
    };
 

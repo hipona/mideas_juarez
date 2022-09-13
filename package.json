@@ -15,7 +15,6 @@
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://hipona.github.io/ecommerce-38280",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

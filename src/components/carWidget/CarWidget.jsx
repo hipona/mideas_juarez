@@ -11,7 +11,7 @@ export const CarWidget = () => {
       <MDBNavbarLink className='mt-4'>
         <MDBIcon fas icon='shopping-cart fa-lg text-light' size='lg' />
         <MDBBadge color='danger' notification pill>
-          {cart.length}
+          {cart.map(item => (item.cant)).reduce((ant,act)=>ant+act,0)}
         </MDBBadge>
         </MDBNavbarLink>
     </>
