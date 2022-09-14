@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { MDBInput,MDBCard,MDBCardBody,MDBBtn,MDBCol,MDBIcon} from 'mdb-react-ui-kit';
+import React, { useState, useContext } from 'react'
+import { MDBInput,MDBCard,MDBCardBody,MDBBtn,MDBCol,MDBIcon,MDBSpinner} from 'mdb-react-ui-kit';
 import { CartContext } from '../../context/CartContext';
 import {useNavigate} from 'react-router-dom';
 import swal from 'sweetalert';
@@ -9,7 +9,7 @@ import { addDoc, collection, getDocs, Timestamp } from 'firebase/firestore';
 
 const Formulario = () => {
     const cartContext = useContext(CartContext);
-    const { cart, deleteCart } = cartContext;  
+    const { cart } = cartContext;  
     const [response, setResponse] = useState(null);
   
     const navigate = useNavigate()
@@ -98,13 +98,11 @@ const Formulario = () => {
         })
     }
     generarTiket(formulario);
-    
-    deleteCart();
     //Limpiar Carrito
    };
 
     const toDescription=(id)=>{
-      navigate(`/Order/${id}`);
+        navigate(`/Order/${id}`)
     }
 
    const generarTiket = async (formulario) => {
@@ -121,6 +119,7 @@ const Formulario = () => {
 
   return (
     <>
+
       <MDBCard>
         <MDBCardBody>
           <div className="d-flex">
@@ -189,7 +188,7 @@ const Formulario = () => {
         >
           Finalizar la compra
         </MDBBtn>
-        {response && "Los Datos Fueron Enviados.."}
+        
     </>
   );
 }

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import {useParams} from 'react-router-dom';
 import { MDBCardHeader,MDBCard,MDBContainer,MDBRow,MDBCardBody,MDBBtn,MDBCol,MDBSpinner,MDBCardFooter} from 'mdb-react-ui-kit';
-import moment from 'moment';
+import { CartContext } from '../../context/CartContext';
 import db from '../../service';
 import { collection, getDocs, query} from "firebase/firestore";
 import ItemOrder from '../ItemOrder/ItemOrder';
@@ -11,6 +11,9 @@ const Order = () => {
   const {id} = useParams();
   
   const [itemId, setItem] = useState({});
+
+  const cartContext = useContext(CartContext);
+  const { deleteCart } = cartContext;  
  
   useEffect(() => {
     const getProductosId  = async () => {
@@ -26,6 +29,7 @@ const Order = () => {
       }
     }
       getProductosId()
+      deleteCart();
        return () => {
        }
   }, [id])
