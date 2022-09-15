@@ -1,10 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {Link} from 'react-router-dom';
 import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from 'mdb-react-ui-kit';
+import { CartContext } from '../../context/CartContext';
 
   const ItemCount = ({stock, inicial, colores, onAddCart, onAddShop}) => {
   const [cantidad, setProducto] = useState(inicial)
   const [selecColor, setSelectColor] = useState(colores[0])
+
+  const cartContext = useContext(CartContext);
+  const { cart } = cartContext;
 
   const handleChange = event => {
     setSelectColor(event.target.value);
@@ -62,15 +66,30 @@ import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from '
       
       <MDBRow>
         <MDBCol md="6" className='mb-3'>
-            <MDBBtn
-              rounded
-              color="dark"
-              onClick={() => onAddShop(cantidad, selecColor)}
-              disabled={stock === 0 ? true : null}
-              style={{ width: "180px" }}
+        {
+         cart.length ? (
+            <Link to='/Cart'>
+                <MDBBtn
+                  rounded
+                  color="dark"
+                  style={{ width: "180px" }}
+                >
+                  Ir al <MDBIcon fas icon="shopping-cart" />
+                </MDBBtn>
+            </Link>
+         ) 
+         : 
+         (
+          <MDBBtn
+            rounded
+            color="dark"
+            disabled= "true"
+            style={{ width: "180px" }}
             >
-              Comprar
-            </MDBBtn>
+            Ir al <MDBIcon fas icon="shopping-cart" />
+          </MDBBtn>
+         )
+        }
         </MDBCol>
         <MDBCol md="6">
           <MDBBtn

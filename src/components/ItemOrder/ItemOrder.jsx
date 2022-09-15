@@ -9,7 +9,7 @@ const ItemOrder = ({item}) => {
             <MDBCol sm='3'>
             <img
                 src={img}
-                style={{ width: '45px'}}
+                style={{ width: '50px'}}
               />
             </MDBCol>
             <MDBCol sm='7'>

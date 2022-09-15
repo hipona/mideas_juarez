@@ -3,8 +3,6 @@ import CarWidget from '../carWidget/CarWidget';
 import NavBarItems from '../NavBarItems/NavBarItems';
 import {MDBContainer,MDBNavbar,MDBNavbarBrand,MDBNavbarToggler,MDBIcon,MDBNavbarNav,MDBCollapse,MDBInputGroup} from 'mdb-react-ui-kit';
 import {Link} from 'react-router-dom';
-import routes from '../Data/routes.json';
-
 import db from '../../service';
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 

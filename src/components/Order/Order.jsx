@@ -42,7 +42,7 @@ const Order = () => {
         <MDBRow>
           <MDBCol sm="7">
             <MDBCard>
-              <MDBCardHeader>MI OREN DE COMPRA <label className="fs-6 fw-bold">{id}</label> <label className="fs-6 fw-bold">{itemId.date.toDate().toString()}</label></MDBCardHeader>
+              <MDBCardHeader>MI OREN DE COMPRA <label className="fs-6 fw-bold text-primary">{id}</label> <label className="fs-6 fw-bold">{itemId.date.toDate().toString()}</label></MDBCardHeader>
               <MDBCardBody>
                 <MDBContainer className="text-center">
                   <label>{itemId.buyer.nombre} - {itemId.buyer.apellido}</label>
