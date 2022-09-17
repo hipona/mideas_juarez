@@ -10,6 +10,16 @@ const Cart = () => {
   const cartContext = useContext(CartContext);
   const {cart, deleteCart } = cartContext;
 
+  const totalItems = () =>{
+      let totalItems = cart.map(item => (item.cant)).reduce((ant,act)=>ant+act,0);
+      return totalItems
+    }
+
+    const total = () =>{
+      let totalCompra = cart.map(item => (item.cant * item.valor)).reduce((ant,act)=>ant+act,0);
+      return totalCompra
+    }
+
   const delToCardHandle = () => {
     deleteCart()
   }
@@ -32,7 +42,7 @@ const Cart = () => {
           </MDBCard>
         </MDBCol>
         <MDBCol sm='4'>
-          <Formulario/>
+          <Formulario total={totalItems()}  compra={total()}/>
         </MDBCol>
       </MDBRow>
     </MDBContainer>

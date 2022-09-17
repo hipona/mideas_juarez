@@ -2,7 +2,7 @@ import React from 'react'
 import { MDBContainer, MDBRow,MDBCol,MDBBtn,MDBIcon} from 'mdb-react-ui-kit';
 
 const CartItem = ({item, deleteCartPorId}) => {
- const {id, img, titulo, valor, cuotas, selecColor, cant} = item;   
+ const {id, img, titulo, valor, selecColor, cant} = item;   
   return (
           <>
           <MDBContainer className='text-center'>

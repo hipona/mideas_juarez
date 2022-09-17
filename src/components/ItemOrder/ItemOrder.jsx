@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBRow,MDBCol,MDBBtn,MDBIcon} from 'mdb-react-ui-kit';
+import { MDBRow,MDBCol } from 'mdb-react-ui-kit';
 
 const ItemOrder = ({item}) => {
   const {id, img, titulo, valor, cuotas, selecColor, cant} = item;   

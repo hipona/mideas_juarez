@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {MDBCard,MDBRow,MDBIcon,MDBBtn,MDBCol, MDBTypography,MDBContainer} from 'mdb-react-ui-kit';
 import { CartContext } from '../../context/CartContext';
 
-  const ItemCount = ({stock, inicial, colores, onAddCart, onAddShop}) => {
+  const ItemCount = ({stock, inicial, colores, onAddCart}) => {
   const [cantidad, setProducto] = useState(inicial)
   const [selecColor, setSelectColor] = useState(colores[0])
 
@@ -74,7 +74,7 @@ import { CartContext } from '../../context/CartContext';
                   color="dark"
                   style={{ width: "180px" }}
                 >
-                  Ir al <MDBIcon fas icon="shopping-cart" />
+                  Ir al <MDBIcon fas icon="shopping-cart" className='me-2'/><span className='text-danger fs-6'> {cart.map(item => (item.cant)).reduce((ant,act)=>ant+act,0)} </span> 
                 </MDBBtn>
             </Link>
          ) 
@@ -86,7 +86,7 @@ import { CartContext } from '../../context/CartContext';
             disabled= "true"
             style={{ width: "180px" }}
             >
-            Ir al <MDBIcon fas icon="shopping-cart" />
+            Ir al <MDBIcon fas icon="shopping-cart" className='me-2'/> {cart.map(item => (item.cant)).reduce((ant,act)=>ant+act,0)}
           </MDBBtn>
          )
         }

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext';
 import CartItem from '../CartItem/CartItem';
-import { MDBContainer,MDBRow,MDBCardBody,MDBBtn,MDBCol,MDBIcon} from 'mdb-react-ui-kit';
+import { MDBContainer,MDBRow,MDBCol,MDBIcon} from 'mdb-react-ui-kit';
 const CartListItem = () => {
   const cartContext = useContext(CartContext);
   const { cart, deleteCartPorId } = cartContext;

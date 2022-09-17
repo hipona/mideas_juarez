@@ -1,3 +1,4 @@
+import { isValidTimestamp } from "@firebase/util";
 import React, { createContext, useState } from "react";
 
 export const CartContext = createContext(null);
@@ -20,9 +21,10 @@ const CartProvider = (props) => {
         }
     }
 
-    const deleteCartPorId = ( id ) => {
+   
+    const deleteCartPorId = (id) => {
         const newCart = [...cart];
-        let index = newCart.findIndex(p => p.id === id);
+        let index = newCart.indexOf(p => p.id === id);
         
         newCart.splice( index, 1 );
 
@@ -33,6 +35,7 @@ const CartProvider = (props) => {
         setCart([]);
     }
 
+
   return (
     <CartContext.Provider 
             value={{ 
@@ -40,7 +43,7 @@ const CartProvider = (props) => {
                         setCart,
                         addToCart,
                         deleteCartPorId,
-                        deleteCart, 
+                        deleteCart
                    }}
         >
             {props.children}
